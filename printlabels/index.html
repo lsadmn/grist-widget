@@ -40,7 +40,10 @@
           <div class="labelpage" :class="'page-' + template.id">
             <template v-for="label in page">
               <div class="label" :class="'label-' + template.id">
-                <div class="label-content">{{label}}</div>
+                <div class="label-content">
+  <img :src="'https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=' + label">
+  <div>{{label}}</div>
+</div>
               </div>
             </template>
           </div>
